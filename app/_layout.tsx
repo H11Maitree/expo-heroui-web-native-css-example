@@ -1,7 +1,6 @@
 import { Stack } from "expo-router";
 import { HeroUINativeProvider } from "heroui-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import "../global.css";
 import { PlatformSpecificProvider } from "./PlatformSpecificProvider";
 
 export default function RootLayout() {

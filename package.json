@@ -3,11 +3,11 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo start",
+    "start": "UNIWIND_CSS_ENTRY=./native.css expo start",
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "android": "UNIWIND_CSS_ENTRY=./native.css expo start --android",
+    "ios": "UNIWIND_CSS_ENTRY=./native.css expo start --ios",
+    "web": "UNIWIND_CSS_ENTRY=./web.css expo start --web",
     "lint": "expo lint"
   },
   "dependencies": {
