@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "Expo HeroUI Platform Example",
-    "slug": "expo-heroui-platform-example",
+    "slug": "expo-heroui-web-native-css-example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "expo-heroui-platform-example",
+    "scheme": "expo-heroui-web-native-css-example",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

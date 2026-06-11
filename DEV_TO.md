@@ -18,7 +18,7 @@ Rendering different components with `.web.tsx` files was not the difficult part.
 
 ![HeroUI menu rendered from one Expo project on an iOS simulator using HeroUI Native and in a web browser using HeroUI React](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fb8g2qyrztx3gfqz3713.png)
 
-You can see the complete working example in the [GitHub repository](https://github.com/H11Maitree/expo-heroui-platform-example).
+You can see the complete working example in the [GitHub repository](https://github.com/H11Maitree/expo-heroui-web-native-css-example).
 
 ## The CSS setup that caused the problem
 
@@ -239,7 +239,7 @@ Once the dependency graphs were isolated, CSS order stopped deciding which platf
 
 ## References
 
-- [Example repository](https://github.com/H11Maitree/expo-heroui-platform-example)
+- [Example repository](https://github.com/H11Maitree/expo-heroui-web-native-css-example)
 - [Expo SDK 54 documentation](https://docs.expo.dev/versions/v54.0.0/)
 - [Expo Metro configuration](https://docs.expo.dev/versions/v54.0.0/config/metro/)
 - [Uniwind documentation](https://docs.uniwind.dev/)

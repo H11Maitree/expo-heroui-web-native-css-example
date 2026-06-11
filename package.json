@@ -1,5 +1,5 @@
 {
-  "name": "expo-heroui-platform-example",
+  "name": "expo-heroui-web-native-css-example",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
