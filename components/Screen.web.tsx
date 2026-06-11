@@ -1,7 +1,7 @@
+import type { PropsWithChildren } from "react";
 import { View } from "react-native";
-import MenuExample from "./MenuExample";
 
-export default function HomeScreen() {
+export default function Screen({ children }: PropsWithChildren) {
   return (
     <View
       style={{
@@ -11,7 +11,7 @@ export default function HomeScreen() {
         backgroundColor: "var(--background)",
       }}
     >
-      <MenuExample />
+      {children}
     </View>
   );
 }

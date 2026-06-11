@@ -1,25 +1,32 @@
 import { Ionicons } from "@expo/vector-icons";
 import type { Selection } from "@heroui/react";
 import {
-  Button,
-  Description,
-  Dropdown,
-  Header,
-  Kbd,
-  Label,
-  Separator,
-  toast,
+    Button,
+    Description,
+    Dropdown,
+    Header,
+    Kbd,
+    Label,
+    Separator,
+    toast,
 } from "@heroui/react";
 import { useState } from "react";
 
-export default function MenuExample() {
+interface MenuExampleProps {
+  isOpen: boolean;
+  onOpenChange: (isOpen: boolean) => void;
+}
+
+export default function MenuExample({
+  isOpen,
+  onOpenChange,
+}: MenuExampleProps) {
   const [textStyles, setTextStyles] = useState<Selection>(
     () => new Set(["World"]),
   );
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Dropdown isOpen={isOpen} onOpenChange={setIsOpen}>
+    <Dropdown isOpen={isOpen} onOpenChange={onOpenChange}>
       <Button aria-label="Menu" variant="secondary">
         <Ionicons
           name={isOpen ? "chevron-up" : "chevron-down"}
@@ -29,7 +36,7 @@ export default function MenuExample() {
         {isOpen ? "Close" : "Open"}
       </Button>
 
-      <Dropdown.Popover className="min-w-[200px]">
+      <Dropdown.Popover className="min-w-[200px]" placement="bottom">
         <Dropdown.Menu>
           <Dropdown.Item id="banananonina" textValue="Banananonina">
             <Ionicons name="sparkles" size={16} />

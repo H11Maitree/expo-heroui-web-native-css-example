@@ -1,8 +1,8 @@
 import { useThemeColor } from "heroui-native";
+import type { PropsWithChildren } from "react";
 import { View } from "react-native";
-import MenuExample from "./MenuExample";
 
-export default function HomeScreen() {
+export default function Screen({ children }: PropsWithChildren) {
   const backgroundColor = useThemeColor("background");
 
   return (
@@ -14,7 +14,7 @@ export default function HomeScreen() {
         backgroundColor,
       }}
     >
-      <MenuExample />
+      {children}
     </View>
   );
 }
