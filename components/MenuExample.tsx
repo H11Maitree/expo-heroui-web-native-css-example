@@ -1,6 +1,12 @@
 import { Ionicons } from '@expo/vector-icons';
 import type { MenuKey } from 'heroui-native';
-import { Button, Menu, Separator, useThemeColor } from 'heroui-native';
+import {
+    Button,
+    Menu,
+    Separator,
+    useThemeColor,
+    useToast,
+} from 'heroui-native';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
 
@@ -8,6 +14,7 @@ const menuIndicatorColor = '#7c7f87';
 
 export default function MenuExample() {
     const [accentColor, dangerColor] = useThemeColor(['accent', 'danger']);
+    const { toast } = useToast();
     const [textStyles, setTextStyles] = useState<Set<MenuKey>>(
         () => new Set(["World"])
     );
@@ -60,7 +67,17 @@ export default function MenuExample() {
                     <Separator className="mx-2 my-2 opacity-75" />
                     <Menu.Label className="mb-1 text-danger">Happy</Menu.Label>
                     <Menu.Group>
-                        <Menu.Item id="hack" variant="danger">
+                        <Menu.Item
+                            id="hack"
+                            variant="danger"
+                            onPress={() =>
+                                toast.show({
+                                    variant: 'danger',
+                                    label: 'Hacking',
+                                    description: 'Hacking action selected.',
+                                })
+                            }
+                        >
                             <Ionicons name="bug" size={16} color={dangerColor} />
                             <Menu.ItemTitle>Hacking</Menu.ItemTitle>
                         </Menu.Item>

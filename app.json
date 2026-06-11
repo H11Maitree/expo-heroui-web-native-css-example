@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "Expo HeroUI Platform Example",
+    "slug": "expo-heroui-platform-example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "expo-heroui-platform-example",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

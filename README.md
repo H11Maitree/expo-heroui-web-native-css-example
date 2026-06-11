@@ -1,50 +1,37 @@
-# Welcome to your Expo app 👋
+# Expo HeroUI Platform Example
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An Expo SDK 54 example that uses:
 
-## Get started
+- `heroui-native` on iOS and Android
+- `@heroui/react` on web
+- one Expo project and one Metro process
 
-1. Install dependencies
+Platform-specific files keep each HeroUI implementation, provider, and CSS
+pipeline out of the other platform's bundle.
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Run
 
 ```bash
-npm run reset-project
+npm install
+npm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Or start a platform directly:
 
-## Learn more
+```bash
+npm run ios
+npm run android
+npm run web
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## How It Works
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Shared routes import modules such as `PlatformSpecificProvider` and
+`MenuExample`. Metro resolves the `.web.tsx` version for web and the matching
+`.tsx` version for native.
 
-## Join the community
+Native CSS is compiled by Uniwind. Web CSS is compiled by Expo, PostCSS, and
+Tailwind CSS. This prevents `heroui-native` and `@heroui/react` styles from
+being processed or bundled together.
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+See [`styles/README.md`](styles/README.md) for the CSS setup and constraints.

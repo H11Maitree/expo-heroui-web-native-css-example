@@ -1,13 +1,12 @@
 {
-  "name": "my-app",
+  "name": "expo-heroui-platform-example",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "UNIWIND_CSS_ENTRY=./native.css expo start",
-    "reset-project": "node ./scripts/reset-project.js",
-    "android": "UNIWIND_CSS_ENTRY=./native.css expo start --android",
-    "ios": "UNIWIND_CSS_ENTRY=./native.css expo start --ios",
-    "web": "UNIWIND_CSS_ENTRY=./web.css expo start --web",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
     "lint": "expo lint"
   },
   "dependencies": {
@@ -46,6 +45,7 @@
     "uniwind": "^1.8.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
     "@types/react": "~19.1.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
